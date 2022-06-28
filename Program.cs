@@ -1,4 +1,11 @@
-﻿Console.Clear();
+﻿void PrintArray (string [] array)
+{
+    foreach (string Element in array)
+        Console.Write($"{Element}, ");
+    Console.WriteLine();
+}
+
+Console.Clear();
 Console.Write("Введите массив строк, разделяя элементы запятой: ");
 string DefaultData = Console.ReadLine() ?? "0";
 
@@ -19,3 +26,6 @@ foreach (string Element in DefaultArray)
         NewArray[i] = Element;
         i++;
     }
+
+PrintArray(DefaultArray);
+PrintArray(NewArray);
